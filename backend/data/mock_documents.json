@@ -1,0 +1,32 @@
+[
+  {
+    "ID": "SOP-001",
+    "Title": "Sample SOP",
+    "Type": "SOP",
+    "Status": "Active",
+    "Date": "2024-01-01",
+    "Department": "Microbiology",
+    "References": ["FORM-123"],
+    "ReferencedBy": ["WI-789"]
+  },
+  {
+    "ID": "FORM-123",
+    "Title": "Submission Form",
+    "Type": "FORM",
+    "Status": "Draft",
+    "Date": "2023-11-15",
+    "Department": "Receiving",
+    "References": [],
+    "ReferencedBy": ["SOP-001"]
+  },
+  {
+    "ID": "WI-789",
+    "Title": "Work Instruction for Setup",
+    "Type": "WI",
+    "Status": "Active",
+    "Date": "2022-06-10",
+    "Department": "Serology",
+    "References": ["SOP-001"],
+    "ReferencedBy": []
+  }
+]
