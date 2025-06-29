@@ -1,7 +1,5 @@
 from fastapi import FastAPI
+from app_routes import documents
 
 app = FastAPI()
-
-@app.get("/")
-def read_root():
-    return {"message": "Backend is up!"}
+app.include_router(documents.router)

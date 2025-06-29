@@ -1,0 +1,22 @@
+[
+  {
+    "id": "SOP-001",
+    "title": "Sample SOP",
+    "type": "SOP",
+    "status": "Active",
+    "department": "Quality",
+    "date": "2024-01-01",
+    "references": ["FORM-123"],
+    "referenced_by": ["POL-001"]
+  },
+  {
+    "id": "FORM-123",
+    "title": "Intake Form",
+    "type": "FORM",
+    "status": "Draft",
+    "department": "Receiving",
+    "date": "2023-10-12",
+    "references": [],
+    "referenced_by": ["SOP-001"]
+  }
+]
