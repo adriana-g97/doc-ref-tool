@@ -1,17 +1,17 @@
-from fastapi import APIRouter, HTTPException
-import json
-from pathlib import Path
+from fastapi import APIRouter
+from starlette.responses import JSONResponse
 
 router = APIRouter()
 
-@router.get("/documents/{doc_id}")
+@router.get("/doc/{doc_id}")
 def get_document(doc_id: str):
-    file_path = Path(__file__).resolve().parents[1] / "data" / "mock_documents.json"
-    with open(file_path, "r") as file:
-        documents = json.load(file)
-
-    for doc in documents:
-        if doc["id"].lower() == doc_id.lower():
-            return doc
-
-    raise HTTPException(status_code=404, detail="Document not found")
+    return JSONResponse({
+        "id": doc_id,
+        "title": "Mock Title",
+        "type": "SOP",
+        "status": "Active",
+        "department": "Testing",
+        "date": "2025-01-01",
+        "references": ["FORM-123"],
+        "referenced_by": ["POL-001"]
+    })
